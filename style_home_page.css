@@ -1,0 +1,22 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    margin: 8px 0px 0px 0px;
+}
+
+.en-tete{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0px 0px 5px grey;
+    background-color: #EAEAEA;
+}
+
+.logo{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
