@@ -11,6 +11,11 @@ a{
     color: white;
 }
 
+h2{
+    margin-left: 50px;
+    padding-top: 50px;
+}
+
 h3{
     color: black;
     font-weight: 700;
@@ -23,16 +28,26 @@ h4{
 .en-tete{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    box-shadow: 0px 0px 5px grey;
+    justify-content: center;    margin-bottom: 6px;
+    box-shadow: 0px 6px 5px lightgrey;
     background-color: #EAEAEA;
+}
+
+.fa-location-dot{
+    margin-top: 15px;
+    margin-right: 15px;
+    color: #353535 
+
 }
 
 .logo{
     background-color: white;
     display: flex;
     justify-content: center;
+    padding-bottom: 20px;
     margin-top: 50px;
+    margin-bottom: 6px;
+    box-shadow: 0px 6px 5px lightgrey;
 }
 
 .reservation {
@@ -59,12 +74,13 @@ h4{
     text-decoration: none;
     color: white;
     box-shadow: 0px 4px 10px 0px grey;
+    width: 25%;
 }
 
 .bouton_fonctionnement{
     margin: 20px 16px;
 	padding: 20px 0px;
-	border-radius: 50px;
+	border-radius: 30px;
 	display: flex;
 	justify-content: center;
     text-decoration: none;
@@ -72,6 +88,7 @@ h4{
     width: 80%;
     box-shadow: 0px 4px 15px 0px grey;
     align-items: center;
+    margin-left: 90px;
 }
 
 .section_bouton_fonctionnement{
@@ -80,17 +97,34 @@ h4{
     flex-direction: column;
 }
 
+.fa-mobile-screen-button{
+    margin-right: 20px;
+    color:#7E7E7E;
+}
+
+.fa-list-ul{
+    margin-right: 20px;
+    color:#7E7E7E;
+}
+
+.fa-store{
+    margin-right: 20px;
+    color:#9356DC;
+}
+
 .chiffres{
     border-radius: 50px 50px 50px 50px;
     background-color: #9356DC;
     position: absolute;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 20px 0px 20px;
     margin-top: 38px;
     color: white;
+    margin-left: 70px;
 }
 
 .section_restaurants{
     background-color: #F6F6F6;
+    height: 2350px;
 }
 
 .image {
@@ -115,9 +149,10 @@ h4{
     background-color: white;
     width: 90%;
     height: 500px;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-top: 30px;
     color: black;
+    
 }
 
 .restaurants{
