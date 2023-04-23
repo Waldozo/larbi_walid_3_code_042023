@@ -6,6 +6,17 @@ body{
     margin: 8px 0px 0px 0px;
 }
 
+a{
+    text-decoration: none;
+}
+
+h3{
+    color: black;
+    font-weight: 700;
+}
+
+
+
 .en-tete{
     display: flex;
     flex-direction: row;
@@ -73,4 +84,67 @@ body{
     padding: 0px 15px 0px 15px;
     margin-top: 38px;
     color: white;
+}
+
+.section_restaurants{
+    background-color: #F6F6F6;
+}
+
+.image {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    width : 100%;
+    height : 400px;
+    object-fit: cover;
+}
+
+.nouveau{
+    position: absolute;
+    background: #99E2D0;
+    color: #008766;
+    padding: 0px 15px 0px 15px;
+    margin-left: 750px;
+    margin-top: 50px;
+}
+
+.contenant{
+    border-radius: 50px;
+    background-color: white;
+    width: 90%;
+    height: 500px;
+    margin-left: 30px;
+    margin-top: 30px;
+    color: black;
+}
+
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.titres_restaurants{
+    margin-left: 35px;
+}
+
+.titres_restaurants p{
+    font-weight: 300;
+}
+
+.contenant_titres_coeur{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.coeur{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 35px;
+    font-size: 35px;
+}
+
+.ceour:hover{
+    background-color: white;
 }
