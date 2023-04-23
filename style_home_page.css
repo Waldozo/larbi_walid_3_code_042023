@@ -8,6 +8,7 @@ body{
 
 a{
     text-decoration: none;
+    color: white;
 }
 
 h3{
@@ -15,7 +16,9 @@ h3{
     font-weight: 700;
 }
 
-
+h4{
+    font-family: 'Shrikhand';
+}
 
 .en-tete{
     display: flex;
@@ -147,4 +150,34 @@ h3{
 
 .ceour:hover{
     background-color: white;
+}
+
+.pieds_de_page{
+    height: 170px;
+    background-color: #353535;
+    color: white;
+    display: flex;
+}
+
+.icone_pieds_de_page{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-bottom: 7px;
+}
+
+.fa-utensils{
+    margin-right: 20px;
+}
+
+.fa-handshake-angle{
+    margin-right: 20px;
+    font-size: 12px;
 }
