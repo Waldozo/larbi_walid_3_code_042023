@@ -25,11 +25,12 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #F6F6F6;
+    align-items: center;
 }
 
 .texte_reservation{
     display: flex;
-    justify-content: center;
+    text-align: center;
     width: 30%;
     flex-direction: column;
 }
@@ -43,6 +44,33 @@ body{
 	justify-content: center;
     text-decoration: none;
     color: white;
-    width: 22%;
     box-shadow: 0px 4px 10px 0px grey;
+}
+
+.bouton_fonctionnement{
+    margin: 20px 16px;
+	padding: 20px 0px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+    text-decoration: none;
+    background: #F6F6F6;
+    width: 80%;
+    box-shadow: 0px 4px 15px 0px grey;
+    align-items: center;
+}
+
+.section_bouton_fonctionnement{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.chiffres{
+    border-radius: 50px 50px 50px 50px;
+    background-color: #9356DC;
+    position: absolute;
+    padding: 0px 15px 0px 15px;
+    margin-top: 38px;
+    color: white;
 }
