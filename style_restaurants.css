@@ -1,9 +1,31 @@
 *{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
     margin: 0px 0px 0px 0px;
+}
+
+h1{
+    font-family: 'Shrikhand';
+    font-weight: 400;
+}
+
+h2{
+    font-weight: 300;
+}
+
+h3{
+    font-weight: 500;
+}
+
+p{
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 .entete{
@@ -30,4 +52,49 @@ body{
     display:flex;
     object-fit: cover;
     width: 100%;
+}
+
+.titre{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+
+.fa-heart{
+    margin-right: 70px;
+    padding-top: 30px;
+}
+
+.section_menu{
+    background-color: #F6F6F6;
+    border-radius: 80px 80px 0px 0px;
+    position: absolute;
+    top: 665px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenant{
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+    box-shadow: 1px 5px 6px 2px lightgrey;
+    display: flex;
+    width: 95%;
+    margin-left: 20px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 40px;
+}
+
+.prix{
+    display: flex;
+    padding-top: 70px;
+    margin-right: 20px;
 }
