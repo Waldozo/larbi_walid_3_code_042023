@@ -1,0 +1,33 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    margin: 0px 0px 0px 0px;
+}
+
+.entete{
+    background-color: white;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo{
+    margin-right: 400px;
+}
+
+.fa-arrow-left{
+    padding-top: 10px;    
+    font-size: xx-large;
+    margin-left: 30px;
+}
+
+.image{
+    display:flex;
+    object-fit: cover;
+    width: 100%;
+}
