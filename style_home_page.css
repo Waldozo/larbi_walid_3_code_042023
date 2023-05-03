@@ -3,7 +3,7 @@
 }
 
 body{
-    margin: 8px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 a{
@@ -53,6 +53,7 @@ h4{
     margin-top: 50px;
     margin-bottom: 6px;
     box-shadow: 0px 6px 5px lightgrey;
+    margin-right: 0px;
 }
 
 .reservation {
@@ -82,9 +83,13 @@ h4{
     
 }
 
+.div_bouton{
+    width: 100%;
+}
+
 .bouton:hover{
     opacity: 80%;
-    transition: 500ms;
+    transition: 300ms;
     box-shadow: 0px 7px 15px 0px grey;
 }
 
@@ -145,11 +150,10 @@ h4{
 .chiffres{
     border-radius: 50px 50px 50px 50px;
     background-color: #9356DC;
-    position: absolute;
+    position: relative;
+    right: 286px;
     padding: 0px 20px 0px 20px;
-    margin-top: 38px;
     color: white;
-    margin-left: 70px;
 }
 
 .section_restaurants{
@@ -164,13 +168,17 @@ h4{
     object-fit: cover;
 }
 
+.position_nouveau{
+    position: relative;
+}
+
 .nouveau{
     position: absolute;
     background: #99E2D0;
     color: #008766;
-    padding: 0px 15px 0px 15px;
-    margin-left: 750px;
-    margin-top: 50px;
+    padding: 0px 40px 0px 40px;
+    top: 40px;
+    right: 30px;
 }
 
 .contenant{
@@ -243,13 +251,36 @@ li{
 }
 
 @media (min-width: 1024px) {
+
+    h1{
+        font-size: 40px;
+    }
+
     .texte_reservation{
-        width: 50%;
+        width: 60%;
+    }
+
+    .bouton{
+        margin-bottom: 30px;
     }
 
     .section_bouton_fonctionnement {
         flex-direction: row;
-        
+        justify-content: space-around;
+    }
+
+    .bouton_fonctionnement{
+        margin-left: 0px;
+        margin-right: 70px;
+        width: 100%;
+    }
+
+    .chiffres{
+        right: 60px;
+    }
+
+    .div_bouton{
+        width: 32%;
     }
 
     .restaurants{
@@ -265,8 +296,7 @@ li{
     }
 
     .nouveau{
-        margin-left: 400px;
-        margin-top: 18px;
+        top: 20px;
     }
 
     .image{
@@ -276,6 +306,7 @@ li{
     ul{
         display: flex;
         flex-direction: row;
+        margin-right: 10px;
     }
 
     .pieds_de_page{
@@ -291,7 +322,4 @@ li{
         margin-right: 10px;
     }
 
-    ul{
-        margin-right: 10px;
-    }
 }
