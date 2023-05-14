@@ -9,6 +9,7 @@ body{
 h1{
     font-family: 'Shrikhand';
     font-weight: 400;
+    font-size: 28px;
 }
 
 h2{
@@ -35,6 +36,73 @@ p{
 
 a{
     text-decoration: none;
+}
+
+.contenant_code{
+    width: 100%;
+    animation: fadein 7s;
+}
+
+.entrees{
+    animation: fadein 12s;
+}
+
+.plats{
+    animation: fadein 17s;
+}
+
+.desserts{
+    animation: fadein 22s;
+}
+
+.chargement {
+    display: inline-block;
+    margin: auto;
+    margin-top: 50%;
+    width: 100%;
+    height: 100vh;
+    animation: fadeOut 3s forwards;
+    position: absolute;
+}
+
+.chargement:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    margin-top: 50%;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: black #fff transparent;
+    animation: chargement 1.2s linear infinite;
+}
+
+@keyframes chargement{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 .entete{
@@ -93,32 +161,32 @@ a{
     bottom: 110px;
 }
 
-.entrees{
-    width: 90%;
+.fa-solid.fa-heart{
+    font-weight: 400;
 }
 
-.icone_check{
+.coeur {
+    width: 9rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 0px 0px 0px;
+}
+  
+.fa-heart {
+    font-size: 2rem;
+}
+
+  
+input[type="checkbox"] {
     display: none;
-    padding-top: 45px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: xx-large;
-    color: white;
 }
-
-
-.contenant:active .icone_check{ 
-    display: flex;
-    background-color: #99E2D0;
-    border-radius: 0px 24px 24px 0px;
-}
-
-.plats{
-    width: 90%;
-}
-
-.desserts{
-    width: 90%;
+  
+input[type="checkbox"]:checked +.fa-solid.fa-heart{
+    font-weight: 900;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .contenant{
@@ -131,6 +199,75 @@ a{
     margin-block: 20px;
 }
 
+/*.icone_check{
+    display: none;
+    padding-top: 45px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: xx-large;
+    color: white;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.contenant:active .icone_check{ 
+    display: flex;
+    background-color: #99E2D0;
+    border-radius: 0px 24px 24px 0px;
+    opacity: 1;
+    transform: translateX(0%);
+}*/
+
+.prix {
+    display: flex;
+    padding-top: 70px;
+    margin-right: 115px;
+    position: absolute;
+    right: 0;
+    transition: transform 0.2s ease;
+}
+
+.checkbox {
+    display: none;
+}
+  
+.label-checkbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+  
+.icone_check {
+    padding-top: 40px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 40px;
+    font-size: xx-large;
+    color: white;
+}
+  
+.checkbox:checked + .label-checkbox .icone_check {
+    display: flex;
+    background-color: #99E2D0;
+    border-radius: 0px 24px 24px 0px;
+    animation: apparition 200ms forwards;
+}
+  
+@keyframes apparition {
+    from {
+      opacity: 0;
+      transform: translateX(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+}
+  
+.checkbox:checked + .label-checkbox .prix {
+    transform: translateX(-50px);
+}
 .menu{
     display: flex;
     flex-direction: column;
@@ -138,11 +275,23 @@ a{
     margin-left: 40px;
 }
 
-.prix{
+.entrees{
+    width: 90%;
+}
+
+.plats{
+    width: 90%;
+}
+
+.desserts{
+    width: 90%;
+}
+
+/*.prix{
     display: flex;
     padding-top: 70px;
     margin-right: 20px;
-}
+}*/
 
 .bouton{
     background: linear-gradient(#FF79DA,#9356DC);
