@@ -3,7 +3,19 @@
 }
 
 body{
+    display: flex;
+    justify-content: center;
     margin: 0px 0px 0px 0px;
+}
+
+.contenant_code{
+    max-width: 1920px;
+    min-width: 320px;
+    width: 100%;
+}
+
+.couleur{
+    background-color: #F6F6F6;
 }
 
 h1{
@@ -38,62 +50,24 @@ a{
     text-decoration: none;
 }
 
-.contenant_code{
-    width: 100%;
-    animation: fadein 7s;
+.logo{
+    display: flex;
 }
 
 .entrees{
-    animation: fadein 12s;
+    animation: fadein 5s;
 }
 
 .plats{
-    animation: fadein 17s;
+    animation: fadein 9s;
 }
 
 .desserts{
-    animation: fadein 22s;
+    animation: fadein 13s;
 }
 
-.chargement {
-    display: inline-block;
-    margin: auto;
-    margin-top: 50%;
-    width: 100%;
-    height: 100vh;
-    animation: fadeOut 3s forwards;
-    position: absolute;
-}
-
-.chargement:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: auto;
-    margin-top: 50%;
-    border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: black #fff transparent;
-    animation: chargement 1.2s linear infinite;
-}
-
-@keyframes chargement{
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-}
-
-@keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+.bouton{
+    animation: fadein 15s;
 }
 
 @keyframes fadein {
@@ -105,20 +79,20 @@ a{
     }
 }
 
+.contenant_entete{
+    width: 100%;
+}
+
 .entete{
     background-color: white;
     padding-bottom: 20px;
     margin-top: 50px;
     flex-direction: row;
-    display: flex;
     justify-content: space-between;
-    width: 100%;
+    display: flex;
+    width: 65%;
 }
 
-.logo{
-    margin-right: auto;
-    margin-left: auto;
-}
 
 .fa-arrow-left{
     padding-top: 10px;    
@@ -143,12 +117,9 @@ a{
 
 .fa-heart{
     margin-right: 70px;
-    padding-top: 30px;
+    margin-top: 40px;
 }
 
-.couleur_fond{
-    background-color: #F6F6F6;
-}
 
 .section_menu{
     background-color: #F6F6F6;
@@ -222,7 +193,7 @@ input[type="checkbox"]:checked +.fa-solid.fa-heart{
 .prix {
     display: flex;
     padding-top: 70px;
-    margin-right: 115px;
+    margin-right: 30px;
     position: absolute;
     right: 0;
     transition: transform 0.2s ease;
@@ -236,6 +207,7 @@ input[type="checkbox"]:checked +.fa-solid.fa-heart{
     display: flex;
     align-items: center;
     width: 100%;
+    position: relative;
 }
   
 .icone_check {
@@ -266,7 +238,7 @@ input[type="checkbox"]:checked +.fa-solid.fa-heart{
 }
   
 .checkbox:checked + .label-checkbox .prix {
-    transform: translateX(-50px);
+    transform: translateX(-100px);
 }
 .menu{
     display: flex;
@@ -293,15 +265,18 @@ input[type="checkbox"]:checked +.fa-solid.fa-heart{
     margin-right: 20px;
 }*/
 
+
+
 .bouton{
     background: linear-gradient(#FF79DA,#9356DC);
-	padding: 20px 70px;
+	padding: 16px 48px;
 	border-radius: 50px;
 	display: flex;
 	justify-content: center;
     text-decoration: none;
     box-shadow: 0px 4px 10px 0px grey;
-    width: 50%;
+    margin-top: 20px;
+    font-weight: 500;
 }
 
 .bouton:hover{
@@ -312,6 +287,7 @@ input[type="checkbox"]:checked +.fa-solid.fa-heart{
 
 .bouton p{
     color: white;
+    margin: 0px;
 }
 
 .pieds_de_page{
@@ -319,6 +295,7 @@ input[type="checkbox"]:checked +.fa-solid.fa-heart{
     color: white;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .pieds_de_page a{
@@ -359,19 +336,18 @@ li{
 
     .fa-heart{
         margin-left: 30px;
-        padding-top: 42px;
     }
-
-    .section_menu{
-        width: 100%;
-       margin-left: auto;
-       margin-right: auto;
-    }
-
-    .couleur_fond{
+    
+    .couleur{
+        background-color: #F6F6F6;
         width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+    }
+
+    .contenant_code{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
     }
 
     li, a{
