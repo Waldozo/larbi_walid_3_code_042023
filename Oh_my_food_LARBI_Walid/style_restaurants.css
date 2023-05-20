@@ -1,0 +1,402 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 0px 0px;
+}
+
+
+h1{
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 28px;
+}
+
+h2{
+    font-weight: 300;
+    text-decoration: underline #99E2D0 5px;
+    text-underline-offset: 10px;
+}
+
+h3{
+    font-weight: 500;
+    color: black;
+}
+
+h4{
+    font-family: 'Shrikhand';
+    margin-left: 40px;
+    margin-bottom: 0px;
+}
+
+p{
+    font-weight: 300;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenant_code{
+    max-width: 1920px;
+    min-width: 320px;
+    width: 100%;
+}
+
+/**** ANIMATION MENU ****/
+.entrees{
+    animation: fadein 5s;
+}
+
+.plats{
+    animation: fadein 9s;
+}
+
+.desserts{
+    animation: fadein 13s;
+}
+
+.bouton{
+    animation: fadein 15s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+} 
+
+/**** ENTETE ****/
+.contenant_entete{
+    width: 100%;
+}
+
+.entete{
+    background-color: white;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    width: 65%;
+}
+
+.logo{
+    display: flex;
+}
+
+.fa-arrow-left{
+    padding-top: 10px;    
+    font-size: xx-large;
+    margin-left: 30px;
+    color: black;
+}
+
+.image{
+    display:flex;
+    object-fit: cover;
+    width: 100%;
+}
+
+/**** SECTION MENU ****/
+.titre{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+
+.fa-heart{
+    margin-right: 70px;
+    margin-top: 40px;
+}
+
+.couleur{
+    background-color: #F6F6F6;
+}
+
+.section_menu{
+    background-color: #F6F6F6;
+    border-radius: 80px 80px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    bottom: 110px;
+}
+
+.fa-solid.fa-heart{
+    font-weight: 400;
+}
+
+.coeur {
+    width: 9rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 0px 0px 30px;
+}
+  
+.fa-heart {
+    font-size: 2rem;
+}
+
+.contenant{
+    border-radius: 24px 24px 24px 24px;
+    background-color: white;
+    box-shadow: 1px 5px 6px 2px lightgrey;
+    display: flex;
+    width: 95%;
+    margin-left: 20px;
+    margin-block: 20px;
+}
+
+.prix {
+    display: flex;
+    padding-top: 70px;
+    margin-right: 30px;
+    position: absolute;
+    right: 0;
+    transition: transform 0.2s ease;
+}
+
+.checkbox {
+    display: none;
+}
+  
+.label-checkbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+  
+.icone_check {
+    padding-top: 40px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 40px;
+    font-size: xx-large;
+    color: white;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 40px;
+}
+
+.entrees{
+    width: 90%;
+}
+
+.plats{
+    width: 90%;
+}
+
+.desserts{
+    width: 90%;
+}
+
+.bouton{
+    background: linear-gradient(#FF79DA,#9356DC);
+	padding: 16px 48px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px 0px grey;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.bouton p{
+    color: white;
+    margin: 0px;
+}
+
+/**** ANIMATION COEUR ****/
+input[type="checkbox"] {
+    display: none;
+}
+  
+input[type="checkbox"]:checked +.fa-solid.fa-heart{
+    font-weight: 900;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    animation: remplissage-coeur 1s;
+}
+
+
+@keyframes remplissage-coeur {
+    0% {
+       opacity: 0;
+    }
+    50%{
+        opacity: 0,5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+input[type="checkbox"]:not(checked) +.fa-solid.fa-heart{
+    animation: vidage-coeur 1s;
+}
+
+@keyframes vidage-coeur {
+    100% {
+        opacity: 1;
+     }
+     50%{
+         opacity: 0,5;
+     }
+    0% {
+         opacity: 0;
+    }
+}
+
+/**** ANIMATION ICONE CHECK ****/
+.checkbox:checked + .label-checkbox .icone_check {
+    display: flex;
+    background-color: #99E2D0;
+    border-radius: 0px 24px 24px 0px;
+    animation: apparition 200ms forwards;
+}
+  
+@keyframes apparition {
+    from {
+      opacity: 0;
+      transform: translateX(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+}
+  
+.checkbox:checked + .label-checkbox .prix {
+    transform: translateX(-100px);
+}
+
+.checkbox:not(:checked) + .label-checkbox .icone_check {
+    display: flex;
+    background-color: #99E2D0;
+    border-radius: 0px 24px 24px 0px;
+    animation: disparition 200ms forwards;
+}
+
+@keyframes disparition {
+    from {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+}
+
+/**** ANIMATION BOUTON ****/
+.bouton:hover{
+    opacity: 80%;
+    transition: 500ms;
+    box-shadow: 0px 7px 15px 0px grey;
+}
+
+.bouton:not(:hover) {
+    transition: 500ms;
+}
+
+/**** PIED DE PAGE ****/
+.pieds_de_page{
+    background-color: #353535;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pieds_de_page a{
+    color: white;
+}
+
+.icone_pieds_de_page{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+ul{
+    list-style: none;
+    color: white;
+}
+
+li{
+    margin-bottom: 7px;
+}
+
+
+.fa-utensils{
+    margin-right: 20px;
+}
+
+.fa-handshake-angle{
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+/**** MEDIA QUERIES GRANDS ECRANS ****/
+@media (min-width: 1024px) {
+
+    .titre{
+        justify-content: center;
+        font-size: 28px;
+    }
+
+    .fa-heart{
+        margin-left: 30px;
+    }
+    
+    .couleur{
+        background-color: #F6F6F6;
+        width: 80%;
+    }
+
+    .contenant_code{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    li, a{
+        margin-right: 10px;
+    }
+
+    ul{
+        margin-right: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    h4{
+        margin-right: 40px;
+        margin-top: 10px;
+    }
+
+    .pieds_de_page{
+        flex-direction: row-reverse;
+    }
+}
+
