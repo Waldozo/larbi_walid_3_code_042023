@@ -165,7 +165,7 @@ a{
     margin-right: 30px;
     position: absolute;
     right: 0;
-    transition: transform 0.2s ease;
+    transition: transform 0.4s ease;
 }
 
 .checkbox {
@@ -177,15 +177,6 @@ a{
     align-items: center;
     width: 100%;
     position: relative;
-}
-  
-.icone_check {
-    padding-top: 40px;
-    padding-left: 28px;
-    padding-right: 28px;
-    padding-bottom: 40px;
-    font-size: xx-large;
-    color: white;
 }
 
 .menu{
@@ -267,17 +258,55 @@ input[type="checkbox"]:not(checked) +.fa-solid.fa-heart{
 }
 
 /**** ANIMATION ICONE CHECK ****/
+.label-checkbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.fa-circle-check{
+  margin-left: 20px;
+  opacity: 0;
+}
+
+.icone_check{
+  padding-top: 37px;
+  padding-bottom: 37px;
+  font-size: xx-large;
+  color: white;
+  transition: all 0.3s linear 0s;
+  background-color: #99E2D0;
+  width: 0;
+  position: absolute;
+  right: 0;
+  border-radius: 0px 24px 24px 0px;
+}
+
+.contenant:hover .fa-circle-check{ 
+    opacity: 1;
+ }
+
+.contenant:hover .icone_check{
+  width: 3%;
+  padding-right: 30px;
+}
+
+.checkbox:hover + .label-checkbox .prix {
+    transform: translateX(-50px);
+}
+
+/*
 .checkbox:checked + .label-checkbox .icone_check {
     display: flex;
     background-color: #99E2D0;
     border-radius: 0px 24px 24px 0px;
-    animation: apparition 200ms forwards;
+    animation: apparition 200ms linear;
 }
   
 @keyframes apparition {
     from {
       opacity: 0;
-      transform: translateX(50%);
+      transform: translateX(100%);
     }
     to {
       opacity: 1;
@@ -285,9 +314,7 @@ input[type="checkbox"]:not(checked) +.fa-solid.fa-heart{
     }
 }
   
-.checkbox:checked + .label-checkbox .prix {
-    transform: translateX(-100px);
-}
+
 
 .checkbox:not(:checked) + .label-checkbox .icone_check {
     display: flex;
